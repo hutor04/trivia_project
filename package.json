@@ -1,0 +1,33 @@
+{
+  "name": "trivia_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "lint": "eslint '**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hutor04/trivia_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hutor04/trivia_project/issues"
+  },
+  "homepage": "https://github.com/hutor04/trivia_project#readme",
+  "devDependencies": {
+    "eslint-config-salt": "^1.1.0",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}

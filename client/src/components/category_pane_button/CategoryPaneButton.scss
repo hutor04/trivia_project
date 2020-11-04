@@ -1,0 +1,54 @@
+$triangle-color: palevioletred;
+
+.pane-button-container {
+  width: 10vw;
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 10vw solid transparent;
+  border-bottom: 10vw solid transparent;
+  border-right: 10vw solid $triangle-color;
+  &:hover {
+    cursor: pointer;
+  }
+  .inner-triangle {
+    position: relative;
+    top: -9vw;
+    left: 1.01vw;
+    width: 0;
+    height: 0;
+    border-top: 9vw solid transparent;
+    border-bottom: 9vw solid transparent;
+    border-right: 9vw solid white;
+    &:hover {
+      border-right: 9vw solid $triangle-color;
+    }
+  }
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 10vw solid transparent;
+  border-bottom: 10vw solid transparent;
+  border-left: 10vw solid $triangle-color;
+  &:hover {
+    cursor: pointer;
+  }
+  .inner-triangle {
+    position: relative;
+    top: -9vw;
+    left: -10vw;
+    width: 0;
+    height: 0;
+    border-top: 9vw solid transparent;
+    border-bottom: 9vw solid transparent;
+    border-left: 9vw solid white;
+    &:hover {
+      border-left: 9vw solid $triangle-color;
+    }
+  }
+}
+
+
