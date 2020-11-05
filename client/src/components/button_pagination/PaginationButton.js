@@ -1,15 +1,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import {
-  incrementPage,
-  decrementPage,
-} from '../category_pane/categoryPaneSlice';
-import './CategoryPaneButton.scss';
+import './PaginationButton.scss';
 
-function CategoryPaneButton({ type }) {
+function PaginationButton({ type, action }) {
   const dispatch = useDispatch();
   const direction = type === 'next' ? 'triangle-right' : 'triangle-left';
-  const action = type === 'next' ? incrementPage : decrementPage;
   return (
     <div className={'pane-button-container'}>
       <div className={direction} onClick={() => dispatch(action())}>
@@ -19,4 +14,4 @@ function CategoryPaneButton({ type }) {
   );
 }
 
-export default CategoryPaneButton;
+export default PaginationButton;

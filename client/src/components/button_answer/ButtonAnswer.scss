@@ -1,0 +1,18 @@
+$base-color: #e8638e;
+$base-background-color: white;
+.button-answer {
+  width: 66vw;
+  background: $base-background-color;
+  color: $base-color;
+  font-size: 1em;
+  margin-bottom: 2vw;
+  padding: 1vw;
+  border: 2px solid $base-color;
+  border-radius: 3px;
+  text-align: center;
+  &:hover {
+    background: $base-color;
+    color: $base-background-color;
+    cursor: pointer;
+  }
+}

@@ -14,7 +14,7 @@ export const quizSlice = createSlice({
   },
   reducers: {
     incrementPage: state => {
-      if (state.page < state.data.length) {
+      if (state.page < state.data.length - 1) {
         state.page += 1;
       }
     },
@@ -54,14 +54,19 @@ export const selectPage = ({ quiz }) => {
   return {};
 };
 
+export const selectPageId = ({ quiz }) => quiz.page;
+export const selectTotalQuestions = ({ quiz }) => quiz.data.length;
 export const selectError = ({ quiz }) => quiz.gotError;
 
 export const selectLoading = ({ quiz }) => quiz.isLoadingData;
 
-export const getSlug = name => {
-  let normalized = name.split(' ');
-  normalized = normalized.map(word => word.charAt(0).toLowerCase() + word.slice(1));
-  return normalized.join('_');
+export const shuffleArray = array => {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
 };
 
 export const {

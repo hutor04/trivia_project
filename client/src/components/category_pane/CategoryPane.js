@@ -7,9 +7,11 @@ import {
   selectError,
   selectLoading,
   getSlug,
+  incrementPage,
+  decrementPage,
 } from './categoryPaneSlice';
 import CategoryTile from '../category_tile/CategoryTile';
-import CategoryPaneButton from '../category_pane_button/CategoryPaneButton';
+import PaginationButton from '../button_pagination/PaginationButton';
 import './CategoryPane.scss';
 
 function CategoryPane() {
@@ -32,7 +34,7 @@ function CategoryPane() {
         <h2>Pick a Category</h2>
       </header>
       <div className={'category-pane'}>
-        <CategoryPaneButton type={'prev'}/>
+        <PaginationButton type={'prev'} action={decrementPage}/>
         <div className={'container-category-pane'}>
           {data.map(cat => {
             const slug = getSlug(cat.name);
@@ -44,7 +46,7 @@ function CategoryPane() {
             );
           })}
         </div>
-        <CategoryPaneButton type={'next'}/>
+        <PaginationButton type={'next'} action={incrementPage}/>
       </div>
     </section>
   );

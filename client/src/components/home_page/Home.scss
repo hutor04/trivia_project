@@ -1,0 +1,25 @@
+.home-splash  {
+  background: linear-gradient( rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75) ), url("../../img/splash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-splash-button {
+  background: palevioletred;
+  color: white;
+  font-size: 2em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  text-decoration: none;
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ce3b6b;
+  }
+}
+
