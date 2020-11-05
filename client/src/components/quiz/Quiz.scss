@@ -1,7 +1,34 @@
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+}
 .quiz-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.button-back {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 64vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  background: white;
+  color: grey;
+  font-size: 3vw;
+  padding: 1vw;
+  border: 2px solid lightgrey;
+  border-radius: 3px;
+  text-decoration: none;
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: lightgrey;
+    color: white;
+  }
 }

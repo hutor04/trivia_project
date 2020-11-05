@@ -1,6 +1,9 @@
 $header-footer-color: #f7d0da;
 $header-footer-border-color: grey;
 
+h2 {
+  color: dimgrey;
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -13,7 +16,7 @@ $header-footer-border-color: grey;
   width: 100vw;
   min-height: 6vw;
   height: 6vh;
-  border-bottom: $header-footer-border-color solid 4px;
+  border-bottom: $header-footer-border-color solid 1px;
   background-color: $header-footer-color;
   a {
     color: black;
@@ -40,7 +43,7 @@ $header-footer-border-color: grey;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: 87vh;
+  min-height: 88vh;
 }
 
 .main-footer {
@@ -53,7 +56,7 @@ $header-footer-border-color: grey;
   height: 6vh;
   background-color: $header-footer-color;
   border-top: $header-footer-border-color solid 1px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   i {
     margin-left: 1vw;
   }

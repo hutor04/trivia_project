@@ -25,7 +25,14 @@ export const quizSlice = createSlice({
     },
     dataLoaded: (state, action) => {
       const { img, results } = action.payload;
-      state.data = results;
+      const withNewFields = results.map(el => (
+        {
+          ...el,
+          answers: shuffleArray(el.answers),
+          userAnswered: false,
+          unsersAnswer: -1,
+        }));
+      state.data = withNewFields;
       state.img = img;
       state.isLoadingData = false;
       state.gotError = false;
@@ -33,6 +40,11 @@ export const quizSlice = createSlice({
     loadError: state => {
       state.isLoadingData = false;
       state.gotError = true;
+    },
+    answerQuestion: (state, action) => {
+      const { questionID, answerID } = action.payload;
+      state.data[questionID].userAnswered = true;
+      state.data[questionID].unsersAnswer = answerID;
     },
   },
 });
@@ -57,8 +69,10 @@ export const selectPage = ({ quiz }) => {
 export const selectPageId = ({ quiz }) => quiz.page;
 export const selectTotalQuestions = ({ quiz }) => quiz.data.length;
 export const selectError = ({ quiz }) => quiz.gotError;
-
 export const selectLoading = ({ quiz }) => quiz.isLoadingData;
+
+export const selectTotalAnswers = ({ quiz }) => quiz.data.filter(el => el.userAnswered).length;
+export const correctAnswers = ({ quiz }) => quiz.data.filter(el => el.unsersAnswer === 0).length;
 
 export const shuffleArray = array => {
   const newArray = [...array];
@@ -74,5 +88,6 @@ export const {
   decrementPage,
   dataLoaded,
   loadError,
+  answerQuestion,
 } = quizSlice.actions;
 export default quizSlice.reducer;

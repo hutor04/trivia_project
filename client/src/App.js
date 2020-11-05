@@ -39,7 +39,7 @@ function App() {
         </div>
         <footer className="main-footer">
           <p>YK 2020</p>
-          <i className="fab fa-github fa-2x"></i>
+          <i className="fab fa-github fa-1x"></i>
         </footer>
       </div>
     </Router>

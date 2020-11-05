@@ -1,5 +1,7 @@
 $base-color: #e8638e;
 $base-background-color: white;
+$correct-background-color: #b0c586;
+
 .button-answer {
   width: 66vw;
   background: $base-background-color;
@@ -16,3 +18,30 @@ $base-background-color: white;
     cursor: pointer;
   }
 }
+.button-answer.correct {
+  background-color: $correct-background-color;
+  &:hover {
+    background-color: $correct-background-color;
+    color: $base-color;
+    cursor: default;
+  }
+}
+.button-answer.answer {
+  background: $base-color;
+  color: $base-background-color;
+  &:hover {
+    background: $base-color;
+    color: $base-background-color;
+    cursor: default;
+  }
+}
+.button-answer.disabled {
+  background: $base-background-color;
+  color: $base-color;
+  &:hover {
+    background: $base-background-color;
+    color: $base-color;
+    cursor: default;
+  }
+}
+

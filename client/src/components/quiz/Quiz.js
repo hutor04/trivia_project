@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import {
   decrementPage,
   incrementPage,
@@ -29,7 +29,7 @@ function Quiz() {
     return <p>Loading data...</p>;
   }
   return (
-    <section>
+    <section className={'quiz-page'}>
       <header>
         <h2>{data.data.category}</h2>
       </header>
@@ -38,6 +38,9 @@ function Quiz() {
         <QuestionCard />
         <PaginationButton type={'next'} action={incrementPage}/>
       </div>
+      <Link to='/quiz-categories' className={'button-back'}>
+        Back to Categories
+      </Link>
     </section>
   );
 }
