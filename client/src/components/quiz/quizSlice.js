@@ -36,6 +36,7 @@ export const quizSlice = createSlice({
       state.img = img;
       state.isLoadingData = false;
       state.gotError = false;
+      state.page = 0;
     },
     loadError: state => {
       state.isLoadingData = false;

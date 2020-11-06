@@ -39,7 +39,7 @@ function App() {
         </div>
         <footer className="main-footer">
           <p>YK 2020</p>
-          <i className="fab fa-github fa-1x"></i>
+          <a href={'https://github.com/hutor04/trivia_project'}><i className="fab fa-github fa-1x"></i></a>
         </footer>
       </div>
     </Router>

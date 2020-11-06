@@ -6,7 +6,7 @@ const config = {
       books: 10,
       film: 11,
       music: 12,
-      theater: 13,
+      // theater: 13,
       television: 14,
       video_games: 15,
       board_games: 16,

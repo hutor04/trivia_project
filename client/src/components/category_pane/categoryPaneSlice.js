@@ -13,7 +13,7 @@ export const categoryPaneSlice = createSlice({
   },
   reducers: {
     incrementPage: state => {
-      if ((state.page + 2) * state.itemsPerPage <= state.data.length) {
+      if (state.page + 1 < state.data.length / state.itemsPerPage) {
         state.page += 1;
       }
     },
